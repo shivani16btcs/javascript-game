@@ -6,7 +6,9 @@
 
  
 <script src="cc.js" type="text/javascript">
-
+function refreshPage(){
+	location.reload();			
+}
 </script>
 </head>
 
@@ -17,6 +19,21 @@
 	<div class="outer">
 	  <br/>
 	  <h1>hit or hung</h1>
+		<br>
+
+		<ul><h2>Rules</h2>
+			<li>ther are 2 team A with red color and team B with blue color</li>
+			<li> both team have 6 chanches means they can press hit button only six times</li>
+			<li> whenever a team press hit then a random point generated and that point is added to total score of that team</li>
+			<li> after pressing the hit button hit button of that team become disable until and unless second team press it hit button</li>
+			<li> when both team press the hit button 6 time then result is declared which tea has won the game</li>
+			<li> inorder to restart the game we just need to press restart button </li>
+
+		</ul>
+		<br>
+		
+		<p><input type="button" value="RESTART" onclick='refreshPage()'/>
+		<br>
 
 
 

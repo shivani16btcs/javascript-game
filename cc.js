@@ -153,10 +153,10 @@ turn1();
 function winner()
   {
 if(totalpoint1.value>totalpoint2.value) {
-alert("GAME OVER! congratulation Team A ['ˋ'-'ˋ'] u won the game");
+alert("GAME OVER! congratulation Team A ['ˋ'-'ˋ']  won the game");
 	     }
 else if(totalpoint1.value<totalpoint2.value)     {
-alert("GAME OVER! congratulation Team B (ˆ-ˆ) u won the game");
+alert("GAME OVER! congratulation Team B (ˆ-ˆ)  won the game");
       }
 } 
 

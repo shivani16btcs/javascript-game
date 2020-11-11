@@ -7,13 +7,18 @@ body {
 
 .outer{
 						
-						background-color:lightyellow;
+						background-color:lightgreen;
 						color:blue;
 						text-align:center;
 	 margin: auto;
 /*         width: 50%; */
         padding: 10px;
 }
+.outer h1{
+	width: 50%;
+}
+	
+
 
 .table1{
 						float:left;

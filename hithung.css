@@ -10,12 +10,18 @@ body {
 						background-color:lightgreen;
 						color:blue;
 						text-align:center;
+	
 	 margin: auto;
-/*         width: 50%; */
+        width: 100%;
         padding: 10px;
 }
 .head{
 	width: 50%;
+}
+
+.table_center{
+	
+	display:inline-block;
 }
 	
 

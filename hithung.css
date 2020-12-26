@@ -6,7 +6,6 @@
  */
 
 .outer{
-						background-color:lightgreen;
 
 						color:blue;
 						text-align:center;
@@ -15,7 +14,10 @@
         padding: 10px;
 }
 .head{
-	width: 50%;
+	width: 80%;
+	background-color:lightgreen;
+	padding:20px;
+
 
 }
 

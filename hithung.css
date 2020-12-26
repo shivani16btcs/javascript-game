@@ -6,7 +6,8 @@
  */
 
 .outer{
-						
+						background-color:lightgreen;
+
 						color:blue;
 						text-align:center;
 	
@@ -15,7 +16,6 @@
 }
 .head{
 	width: 50%;
-	background-color:lightgreen;
 
 }
 

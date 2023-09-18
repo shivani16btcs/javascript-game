@@ -1,117 +1,143 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-
-  <link rel="stylesheet" type="text/css"
-	href="hithung.css">
-
- 
-<script src="cc.js" type="text/javascript">
-
-</script>
-</head>
-
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hit or Hung</title>
+    <link rel="stylesheet" type="text/css" href="hithung.css" />
+    <script src="cc.js" type="text/javascript"></script>
+  </head>
   <body>
+    <div class="outer">
+      <br />
+      <center>
+        <div class="head">
+          <h1>Hit or Hung</h1>
+          <ol>
+            <h2>Rules</h2>
+            <li>
+              There are 2 teams: Team A with red color and Team B with blue
+              color
+            </li>
+            <li>
+              Both teams have 6 chances, which means they can press the "Hit"
+              button only six times
+            </li>
+            <li>
+              Whenever a team presses the "Hit" button, a random point is
+              generated and added to the total score of that team
+            </li>
+            <li>
+              After pressing the "Hit" button, the radio button of that team
+              becomes disabled until the other team presses its "Hit" button
+            </li>
+            <li>
+              When both teams press the "Hit" button 6 times, the result is
+              declared to determine which team has won the game
+            </li>
+            <li>To restart the game, simply press the "RESTART" button</li>
+          </ol>
+          <br />
+          <p>
+            <input type="button" value="RESTART" onclick="location.reload();" />
+          </p>
+        </div>
+      </center>
 
+      <center>
+        <div class="table_center">
+          <!-- TABLE 1 -->
+          <div class="table1">
+            <table border="0" cellpadding="10" cellspacing="40">
+              <tr>
+                <td>
+                  <input
+                    type="radio"
+                    name="select"
+                    id="radio1"
+                    onclick="radioclick(1);"
+                  />
+                  <marquee behavior="alternate" scrollamount="1"
+                    >Team A ['ˋ'-'ˋ']</marquee
+                  >
+                  <hr size="15" color="darkpink" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="button"
+                    id="hit1"
+                    value="Hit"
+                    onclick="random1();"
+                    disabled
+                  />
+                  <div id="randm1"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Chances left
+                  <input type="text" id="chanceleft1" value="6" disabled />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Total points
+                  <input type="text" id="totalpoint1" value="0" disabled />
+                </td>
+              </tr>
+            </table>
+          </div>
+          <!-- table1 div -->
 
-	<div class="outer">
-	  <br/>
-		<center>
-		<div class="head">
-		 <h1>hit or hung</h1>
-		<ol><h2>Rules</h2>
-			<li>There are 2 team A with red color and team B with blue color</li>
-			<li> Both team have 6 chances means they can press hit button only six times</li>
-			<li> Whenever a team press hit then a random point generated and that point is added to total score of that team</li>
-			<li> After pressing the hit button, Radio button of that team become disabled until and unless second team press its hit button</li>
-			<li> When both team press the hit button 6 time then result is declared which team has won the game</li>
-			<li> Inorder to restart the game we just need to press restart button </li>
-
-		</ol>
-		<br>
-		
-		<p><input type="button" value="RESTART" onclick='location.reload();'/>
-		<br>
-		
-		</div>
-		</center>
-			
-	 
-
-<center>
-<div class="table_center">
-<!--TABLE 1-->
-	
-	  <div class="table1">
-
-		<table border="0" cellpadding="10" cellspacing="40">
-		  <tr><td>  
-			  <input type="radio" name="select"
-			id="radio1"onclick="radioclick(1);">
-			  <marquee behavior="alternate" scrollamount="1" > Team A ['ˋ'-'ˋ']
-			  <hr size="15" color="darkpink"/>  </marquee>
-			 </td></tr>
-
-		  <tr><td>
-				<input type="button" id="hit1" value="hit"  onclick="random1();" disabled/>
-				<div id="randm1"></div>
-			  </td></tr>
-
-			<tr><td>chances left
-				<input type="text" id="chanceleft1" value="6" disabled>
-			  </td></tr>
-
-			<tr><td>
-				total point
-				<input type="text" id="totalpoint1"
-				  value="0" disabled>
-			  </td></tr>
-		  
-		</table>
-	  </div><!--table1 div-->
-
-
-<!--TABLE 2-->
-	  <div class="table2">
-
-		<table border="0" cellpadding="10" cellspacing="40">
-		  <tr><td>    
-			  <input type="radio" name="select"
-	id="radio2" onclick="radioclick(2);" >
-			  <marquee behavior="alternate" scrollamount="1" >Team B (ˆ-ˆ)
-			  <hr size="15" color="blue" />
-			  </hr>
-			</td></tr>
-
-		  <tr><td>
-				<input type="button" value="hit" id="hit2" onclick="random2();" disabled/>
-				<div id="randm2"> </div>
-			  </td></tr>
-
-			<tr><td>
-				chances left
-				<input type="text" 
-				  id="chanceleft2" value="6" disabled>
-			  </td></tr>
-			
-			<tr><td>
-			totalpoint
-			<input type="text" id="totalpoint2" value="0" disabled /> 
-	  </td></tr>
-	  
-	  </table>
-	</div><!--table2-->
-</div>
-</center>
-	</div><!--outer-->
+          <!-- TABLE 2 -->
+          <div class="table2">
+            <table border="0" cellpadding="10" cellspacing="40">
+              <tr>
+                <td>
+                  <input
+                    type="radio"
+                    name="select"
+                    id="radio2"
+                    onclick="radioclick(2);"
+                  />
+                  <marquee behavior="alternate" scrollamount="1"
+                    >Team B (ˆ-ˆ)</marquee
+                  >
+                  <hr size="15" color="blue" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="button"
+                    value="Hit"
+                    id="hit2"
+                    onclick="random2();"
+                    disabled
+                  />
+                  <div id="randm2"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Chances left
+                  <input type="text" id="chanceleft2" value="6" disabled />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Total points
+                  <input type="text" id="totalpoint2" value="0" disabled />
+                </td>
+              </tr>
+            </table>
+          </div>
+          <!-- table2 -->
+        </div>
+      </center>
+    </div>
+    <!-- outer -->
   </body>
 </html>
-
-
-
-
-
-
-
-
- 

@@ -1,120 +1,105 @@
+.outer {
+  color: blue;
+  text-align: center;
 
-
-.outer{
-
-						color:blue;
-						text-align:center;
-	
-	 margin: auto;
-        padding: 10px;
+  margin: auto;
+  padding: 10px;
 }
-.head{
-	width: 55%;
-	background-color:lightgreen;
-	padding:20px;
-
-
+.head {
+  width: 55%;
+  background-color: lightgreen;
+  padding: 20px;
 }
 
-.table_center{
-	
-	display:inline-block;
-}
-	
-
-
-.table1{
-						float:left;
-						height:600px;
-						width:350px;
-						background-color:lightyellow;
-/* 						margin-left:100px; */
-						margin-top:100px;
-						border-radius:50px;
-						border:double;
-						border-color:coral;
-						color: red; 	
-						font-size:20px; 
-
+.table_center {
+  display: inline-block;
 }
 
-.table2
-{
-						float:left;
-						height:600px;
-						width:350px;
-						background-color:lightyellow;
-/* 						margin-left:0px; */
-						margin-top:100px;
-						border-radius:50px;
-						border:double;
-						border-color:blue;
+.table1 {
+  float: left;
+  height: 600px;
+  width: 350px;
+  background-color: lightyellow;
+  /* 						margin-left:100px; */
+  margin-top: 100px;
+  border-radius: 50px;
+  border: double;
+  border-color: coral;
+  color: red;
 }
 
-hr{
-						border-color:black;
+.table2 {
+  float: left;
+  height: 600px;
+  width: 350px;
+  background-color: lightyellow;
+  /* 						margin-left:0px; */
+  margin-top: 100px;
+  border-radius: 50px;
+  border: double;
+  border-color: blue;
 }
 
-input[type=radio] {
-							width: 50px;
-        height: 50px;
-        border-radius: 15px;
-        top: -2px;
-        left: -1px;
-        position: relative;
-        background-color: #d1d3d1;
-        content: '';
-        display: inline-block;
-        visibility: visible;
-        border: 2px solid white;
+hr {
+  border-color: black;
 }
 
- input:focus { 
-   					background: black; 
-   					color: white; 
-  }
-  
-  input[type=radio] {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    position: relative;
-    background-color: transparent; /* Transparent background */
-    content: '';
-    display: inline-block;
-    visibility: visible;
-    border: 2px solid #3498db;
-    transition: all 0.3s ease-in-out;
+input[type="radio"] {
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #d1d3d1;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
 }
 
-input[type=radio]:focus {
-    background: transparent;
-    color: #333; /* Dark text color */
+input:focus {
+  background: black;
+  color: white;
+}
+
+input[type="radio"] {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: relative;
+  background-color: transparent; /* Transparent background */
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #3498db;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="radio"]:focus {
+  background: transparent;
+  color: #333; /* Dark text color */
 }
 
 /* Add animation for input[type=radio] */
 @keyframes radioBounce {
-    0% {
-        transform: translateY(0);
-    }
-    25% {
-        transform: translateY(-5px);
-    }
-    50% {
-        transform: translateY(0);
-    }
-    75% {
-        transform: translateY(5px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
-input[type=radio]:checked {
-    animation: radioBounce 0.5s;
+input[type="radio"]:checked {
+  animation: radioBounce 0.5s;
 }
-
-
-
-

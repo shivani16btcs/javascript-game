@@ -9,11 +9,11 @@ function radioclick(x) {
   if (x == 1) {
     turn1();
     document.getElementById("radio2").disabled = true;
-    displayMessage("Team Red, it's your turn. Please hit");
+    displayMessage("Team Red, it's your turn. Please Hit");
   } else if (x == 2) {
     turn2();
     document.getElementById("radio1").disabled = true;
-    displayMessage("Team Blue, it's your turn. Please hit");
+    displayMessage("Team Blue, it's your turn. Please Hit");
   }
 }
 
@@ -39,7 +39,7 @@ function random1() {
   }
 
   totalpoint1.value = eval(totalpoint1.value);
-  displayMessage("Team Blue, it's your turn. Please hit");
+  displayMessage("Team Blue, it's your turn. Please Hit");
   alastturn();
   check();
   document.getElementById("radio1").disabled = true;
@@ -58,7 +58,7 @@ function random2() {
     totalpoint2.value = totalpoint2.value + b;
   }
   totalpoint2.value = eval(totalpoint2.value);
-  displayMessage("Team Red, it's your turn. Please hit");
+  displayMessage("Team Red, it's your turn. Please Hit");
   blastturn();
   check();
   document.getElementById("radio2").disabled = true;
@@ -75,14 +75,14 @@ function check() {
 
 function alastturn() {
   if (chanceleft1.value == "0" && chanceleft2.value == "1") {
-    displayMessage("Team Red! ur turn gets over.  Team Blue, it's your  Last turn. Please hit");
+    displayMessage("Team Red! ur turn gets over.  Team Blue, it's your  Last turn. Please Hit");
   }
   turn2();
 }
 
 function blastturn() {
   if (chanceleft2.value == "0" && chanceleft1.value == "1") {
-    displayMessage("Team Blue! ur turn gets over.  Team Red, it's your Last turn. Please hit");
+    displayMessage("Team Blue! ur turn gets over.  Team Red, it's your Last turn. Please Hit");
   }
   turn1();
 }
@@ -98,11 +98,11 @@ function winner() {
   const difference = Math.abs(redTotal - blueTotal);
 
   if (redTotal > blueTotal) {
-    displayMessage(`GAME OVER! Congratulations Team Red (ˆ-ˆ) has won by ${difference} points      `);
+    displayMessage(`GAME OVER! Congratulations, Team Red (ˆ-ˆ) has won by ${difference} points          `);
     messageContainer.classList.add("red-win");
     messageContainer.classList.remove("blue-win");
   } else if (redTotal < blueTotal) {
-    displayMessage(`GAME OVER! Congratulations Team Blue (ˆ-ˆ) has won by ${difference} points      `);
+    displayMessage(`GAME OVER! Congratulations, Team Blue (ˆ-ˆ) has won by ${difference} points          `);
     messageContainer.classList.add("blue-win");
     messageContainer.classList.remove("red-win");
   } else {

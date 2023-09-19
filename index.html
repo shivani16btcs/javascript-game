@@ -11,7 +11,7 @@
     <div class="outer">
       <br />
       <center>
-        <div class="head">
+        <div id="rules" class="head">
           <h1>Hit or Hung</h1>
           <h2>Rules</h2>
           <ol>
@@ -36,105 +36,106 @@
           </ol>
           <br />
           <p>
-            <input type="button" value="RESTART" onclick="location.reload();" />
+            <input type="button" value="START" onclick="startGame();" />
           </p>
         </div>
       </center>
-      <div id="messageContainer" class="message-container"></div>
+      <div id="game">
+        <div id="messageContainer" class="message-container head"></div>
+        <center>
+          <div class="table_center">
+            <!-- TABLE 1 -->
+            <div class="table1">
+              <table border="0" cellpadding="10" cellspacing="40">
+                <tr>
+                  <td>
+                    <input
+                      type="radio"
+                      name="select"
+                      id="radio1"
+                      onclick="radioclick(1);"
+                    />
+                    <marquee behavior="alternate" scrollamount="1"
+                      >Team Red (ˆ-ˆ)</marquee
+                    >
+                    <hr size="15" color="darkpink" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      type="button"
+                      id="hit1"
+                      value="Hit"
+                      onclick="random1();"
+                      disabled
+                    />
+                    <div id="randm1"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Chances left
+                    <input type="text" id="chanceleft1" value="6" disabled />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Total points
+                    <input type="text" id="totalpoint1" value="0" disabled />
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <!-- table1 div -->
 
-      <center>
-        <div class="table_center">
-          <!-- TABLE 1 -->
-          <div class="table1">
-            <table border="0" cellpadding="10" cellspacing="40">
-              <tr>
-                <td>
-                  <input
-                    type="radio"
-                    name="select"
-                    id="radio1"
-                    onclick="radioclick(1);"
-                  />
-                  <marquee behavior="alternate" scrollamount="1"
-                    >Team Red (ˆ-ˆ)</marquee
-                  >
-                  <hr size="15" color="darkpink" />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input
-                    type="button"
-                    id="hit1"
-                    value="Hit"
-                    onclick="random1();"
-                    disabled
-                  />
-                  <div id="randm1"></div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Chances left
-                  <input type="text" id="chanceleft1" value="6" disabled />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Total points
-                  <input type="text" id="totalpoint1" value="0" disabled />
-                </td>
-              </tr>
-            </table>
+            <!-- TABLE 2 -->
+            <div class="table2">
+              <table border="0" cellpadding="10" cellspacing="40">
+                <tr>
+                  <td>
+                    <input
+                      type="radio"
+                      name="select"
+                      id="radio2"
+                      onclick="radioclick(2);"
+                    />
+                    <marquee behavior="alternate" scrollamount="1"
+                      >Team Blue (ˆ-ˆ)</marquee
+                    >
+                    <hr size="15" color="blue" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      type="button"
+                      value="Hit"
+                      id="hit2"
+                      onclick="random2();"
+                      disabled
+                    />
+                    <div id="randm2"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Chances left
+                    <input type="text" id="chanceleft2" value="6" disabled />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Total points
+                    <input type="text" id="totalpoint2" value="0" disabled />
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <!-- table2 -->
           </div>
-          <!-- table1 div -->
-
-          <!-- TABLE 2 -->
-          <div class="table2">
-            <table border="0" cellpadding="10" cellspacing="40">
-              <tr>
-                <td>
-                  <input
-                    type="radio"
-                    name="select"
-                    id="radio2"
-                    onclick="radioclick(2);"
-                  />
-                  <marquee behavior="alternate" scrollamount="1"
-                    >Team Blue (ˆ-ˆ)</marquee
-                  >
-                  <hr size="15" color="blue" />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input
-                    type="button"
-                    value="Hit"
-                    id="hit2"
-                    onclick="random2();"
-                    disabled
-                  />
-                  <div id="randm2"></div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Chances left
-                  <input type="text" id="chanceleft2" value="6" disabled />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Total points
-                  <input type="text" id="totalpoint2" value="0" disabled />
-                </td>
-              </tr>
-            </table>
-          </div>
-          <!-- table2 -->
-        </div>
-      </center>
+        </center>
+      </div>
     </div>
     <!-- outer -->
   </body>

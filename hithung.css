@@ -34,22 +34,29 @@ li {
 }
 
 input[type="button"] {
-  background-color: gray;
-  color: #fff;
+  background-color: gray; /* Orange background color */
+  color: white; /* White text color */
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 input[type="button"]:hover {
-  background-color: rgb(42, 41, 41);
+  background-color: darkgrey; /* Slightly darker orange on hover */
+  transform: scale(1.1); /* Slightly scale up on hover */
 }
 
 /* Styling for disabled radio buttons */
 input[type="button"]:disabled {
   background-color: lightgray;
   cursor: not-allowed;
+}
+
+/* Animation for the "Hit" button when clicked */
+.hit-button-clicked {
+  animation: hammerHit 0.3s ease;
 }
 
 .table_center {
@@ -61,7 +68,7 @@ input[type="button"]:disabled {
   height: 600px;
   width: 350px;
   background-color: lightyellow;
-  margin-top: 100px;
+  margin-top: 20px;
   border-radius: 50px;
   border: double;
   border-color: coral;
@@ -73,7 +80,7 @@ input[type="button"]:disabled {
   height: 600px;
   width: 350px;
   background-color: lightyellow;
-  margin-top: 100px;
+  margin-top: 20px;
   border-radius: 50px;
   border: double;
   border-color: blue;
@@ -143,17 +150,31 @@ input[type="radio"]:checked {
   animation: radioBounce 0.5s;
 }
 
+@keyframes showMessage {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 
 .message-container {
-  background-color: #fff;
+  background-color: #f0f0f0;;
   border: 1px solid #ccc;
   padding: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
   border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   text-align: center;
   font-weight: bold;
   color: #333;
+  animation: showMessage 0.5s ease-in-out;
+
 }
 
  /* Style for font color when Team Red wins */
@@ -164,4 +185,40 @@ input[type="radio"]:checked {
 /* Style for font color when Team Blue wins */
 .message-container.blue-win {
   color: blue;
+}
+
+#rules {
+  display: block;
+}
+
+#game{
+  display: none;
+}
+
+.animate-number-change {
+  animation: numberChange 1s ease-in-out;
+}
+
+
+@keyframes hammerHit {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation to the "Hit" button when clicked */
+.hit-button-clicked {
+  animation: hammerHit 0.3s ease;
 }

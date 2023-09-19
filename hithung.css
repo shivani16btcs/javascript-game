@@ -6,9 +6,50 @@
   padding: 10px;
 }
 .head {
-  width: 55%;
-  background-color: lightgreen;
+  text-align: center;
+  background-color: #f0f0f0;
   padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #ff5733;
+}
+
+h2 {
+  color: #1e90ff;
+  margin-top: 20px;
+}
+
+ol {
+  text-align: left;
+  padding-left: 20px;
+}
+
+li {
+  margin: 10px 0;
+}
+
+input[type="button"] {
+  background-color: gray;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="button"]:hover {
+  background-color: rgb(42, 41, 41);
+}
+
+/* Styling for disabled radio buttons */
+input[type="button"]:disabled {
+  background-color: lightgray;
+  cursor: not-allowed;
 }
 
 .table_center {
@@ -20,7 +61,6 @@
   height: 600px;
   width: 350px;
   background-color: lightyellow;
-  /* 						margin-left:100px; */
   margin-top: 100px;
   border-radius: 50px;
   border: double;
@@ -33,7 +73,6 @@
   height: 600px;
   width: 350px;
   background-color: lightyellow;
-  /* 						margin-left:0px; */
   margin-top: 100px;
   border-radius: 50px;
   border: double;

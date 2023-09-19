@@ -62,7 +62,6 @@ function random1() {
   if (chanceleft1.value > 0) {
     var a = (document.getElementById("randm1").innerHTML =
       Math.floor(Math.random() * 100) + 1);
-    //alert(chanceleft1.value);
     chanceleft1.value = chanceleft1.value - 1;
     totalpoint1.value = totalpoint1.value + "+";
     totalpoint1.value = totalpoint1.value + a;
@@ -97,6 +96,7 @@ function random2() {
 function check() {
   if (chanceleft1.value == "0" && chanceleft2.value == "0") {
     winner();
+
   }
 }
 
@@ -125,4 +125,6 @@ function winner() {
   } else if (totalpoint1.value < totalpoint2.value) {
     alert("GAME OVER! congratulation Team Blue (ˆ-ˆ)  won the game");
   }
+  document.getElementById("hit1").disabled = true;
+  document.getElementById("hit2").disabled = true;
 }

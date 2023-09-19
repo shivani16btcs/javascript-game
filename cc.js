@@ -1,61 +1,23 @@
 function radioclick(x) {
-  //alert('0');
   if (x == 1) {
-    //alert('1');
     turn1();
     document.getElementById("radio2").disabled = true;
   } else if (x == 2) {
-    //alert('2');
     turn2();
     document.getElementById("radio1").disabled = true;
   }
-  disableradio();
-  //radiovalue();
 }
-
-function disableradio() {
-  //alert('dis');
-  //document.getElementById("radio1").disabled=true;
-  //document.getElementById("radio2").disabled=true;
-}
-
-/*
-function radiovalue(){
-alert('check');
-if(select[0].checked==true){
-select[0].checked==false;
-select[1].checked==true;
-}
-
-else if(select[1].checked==true){
-select[0].checked==true;
-select[1].checked==false;
-}
-
-*/
 
 function turn1() {
-  //hit1 enable, hit2 disable
-
   document.getElementById("hit1").disabled = false;
 
   document.getElementById("hit2").disabled = true;
-
-  //document.getElementById("radio1").disabled=true;
-
-  //document.getElementById("radio2").disabled=true;
 }
 
 function turn2() {
-  //hit1disable and hit2 enable
-
   document.getElementById("hit2").disabled = false;
 
   document.getElementById("hit1").disabled = true;
-
-  //document.getElementById("radio1").disabled=true;
-
-  //document.getElementById("radio2").disabled=true value="2";
 }
 
 function random1() {
@@ -96,14 +58,13 @@ function random2() {
 function check() {
   if (chanceleft1.value == "0" && chanceleft2.value == "0") {
     winner();
-
   }
 }
 
 function alastturn() {
   if (chanceleft1.value == "0" && chanceleft2.value == "1") {
   } else if (chanceleft1.value == "0" && chanceleft2.value > "0") {
-    alert(" Team Red ! ur trun gets over");
+    displayMessage("Team Red! ur turn gets over");
   }
 
   turn2();
@@ -113,7 +74,7 @@ function blastturn() {
   if (chanceleft2.value == "0" && chanceleft1.value == "1") {
     //Team Red last turn
   } else if (chanceleft2.value == "0" && chanceleft1.value > "0") {
-    alert(" Team Blue ! ur turn gets over");
+    displayMessage("Team Blue! ur turn gets over");
   }
 
   turn1();
@@ -121,10 +82,20 @@ function blastturn() {
 
 function winner() {
   if (totalpoint1.value > totalpoint2.value) {
-    alert("GAME OVER! congratulation Team Red (ˆ-ˆ)  won the game");
+    displayMessage("GAME OVER! congratulation Team Red (ˆ-ˆ)  won the game");
+    messageContainer.classList.add("red-win"); // Add the "red-win" class
   } else if (totalpoint1.value < totalpoint2.value) {
-    alert("GAME OVER! congratulation Team Blue (ˆ-ˆ)  won the game");
+    displayMessage("GAME OVER! congratulation Team Blue (ˆ-ˆ)  won the game");
+    messageContainer.classList.add("blue-win"); // Add the "blue-win" class
   }
   document.getElementById("hit1").disabled = true;
   document.getElementById("hit2").disabled = true;
+  document.getElementById("radio1").disabled = true;
+  document.getElementById("radio2").disabled = true;
+}
+
+// Function to display a message in the message container
+function displayMessage(message) {
+  const messageContainer = document.getElementById("messageContainer");
+  messageContainer.innerHTML = message;
 }

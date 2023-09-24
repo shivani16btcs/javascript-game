@@ -1,9 +1,8 @@
 function startGame() {
   var rules = document.getElementById("rules");
   rules.style.display = "none";
-  game.style.display ="block"
+  game.style.display = "block";
 }
-
 
 function radioclick(x) {
   if (x == 1) {
@@ -39,6 +38,8 @@ function random1() {
   }
 
   totalpoint1.value = eval(totalpoint1.value);
+  updateTeamRed(totalpoint1.value);
+
   displayMessage("Team Blue, it's your turn. Please Hit");
   alastturn();
   check();
@@ -58,6 +59,8 @@ function random2() {
     totalpoint2.value = totalpoint2.value + b;
   }
   totalpoint2.value = eval(totalpoint2.value);
+  updateTeamBlue(totalpoint2.value);
+
   displayMessage("Team Red, it's your turn. Please Hit");
   blastturn();
   check();
@@ -75,14 +78,18 @@ function check() {
 
 function alastturn() {
   if (chanceleft1.value == "0" && chanceleft2.value == "1") {
-    displayMessage("Team Red! ur turn gets over.  Team Blue, it's your  Last turn. Please Hit");
+    displayMessage(
+      "Team Red! ur turn gets over.  Team Blue, it's your  Last turn. Please Hit"
+    );
   }
   turn2();
 }
 
 function blastturn() {
   if (chanceleft2.value == "0" && chanceleft1.value == "1") {
-    displayMessage("Team Blue! ur turn gets over.  Team Red, it's your Last turn. Please Hit");
+    displayMessage(
+      "Team Blue! ur turn gets over.  Team Red, it's your Last turn. Please Hit"
+    );
   }
   turn1();
 }
@@ -98,22 +105,27 @@ function winner() {
   const difference = Math.abs(redTotal - blueTotal);
 
   if (redTotal > blueTotal) {
-    displayMessage(`GAME OVER! Congratulations, Team Red (ˆ-ˆ) has won by ${difference} points          `);
+    displayMessage(
+      `GAME OVER! Congratulations, Team Red (ˆ-ˆ) has won by ${difference} points          `
+    );
     messageContainer.classList.add("red-win");
     messageContainer.classList.remove("blue-win");
   } else if (redTotal < blueTotal) {
-    displayMessage(`GAME OVER! Congratulations, Team Blue (ˆ-ˆ) has won by ${difference} points          `);
+    displayMessage(
+      `GAME OVER! Congratulations, Team Blue (ˆ-ˆ) has won by ${difference} points          `
+    );
     messageContainer.classList.add("blue-win");
     messageContainer.classList.remove("red-win");
   } else {
-    displayMessage(`GAME OVER! It's a tie with a difference of ${difference} points`);
+    displayMessage(
+      `GAME OVER! It's a tie with a difference of ${difference} points`
+    );
     messageContainer.classList.remove("red-win");
     messageContainer.classList.remove("blue-win");
   }
   document.getElementById("hit1").disabled = true;
   document.getElementById("hit2").disabled = true;
   messageContainer.appendChild(restartButton);
-
 }
 
 // Function to display a message in the message container
@@ -125,12 +137,13 @@ function displayMessage(message, className = "") {
 
 // Function to display the starting message
 function startMessage() {
+  updateHRSize(1, 0);
+  updateHRSize(2, 0);
   displayMessage("Who wants to start first? Please choose the radio button.");
 }
 
 // Call the startMessage function when the page loads
 window.addEventListener("load", startMessage);
-
 
 function restartGame() {
   // Reset scores and enable "Hit" buttons
@@ -153,5 +166,22 @@ function restartGame() {
   var messageContainer = document.getElementById("messageContainer");
   messageContainer.innerText = "";
   messageContainer.classList.remove("red-win", "blue-win");
-  startMessage()
+  startMessage();
+}
+
+function updateHRSize(teamNumber, totalPoints) {
+  const hrElement = document.getElementById(`hr${teamNumber}`);
+  hrElement.style.width = totalPoints / 6 + "px";
+}
+
+// Function to update total points and HR size for Team Red
+function updateTeamRed(totalPoints) {
+  document.getElementById("totalpoint1").value = totalPoints;
+  updateHRSize(1, totalPoints);
+}
+
+// Function to update total points and HR size for Team Blue
+function updateTeamBlue(totalPoints) {
+  document.getElementById("totalpoint2").value = totalPoints;
+  updateHRSize(2, totalPoints);
 }

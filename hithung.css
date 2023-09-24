@@ -223,21 +223,9 @@ input[type="radio"]:checked {
   animation: hammerHit 0.3s ease;
 }
 
-.hr-container {
-  display: inline-block;
-  width: 0; /* Initialize width to 0 */
-  height: 15px; /* Adjust the height as needed */
-  background-color: darkpink; /* Adjust the bar color as needed */
-  position: relative;
-  overflow: hidden;
-}
+
 
 /* Style for the HR bars */
 .hr-bar {
-  height: 100%;
-  background-color: darkpink; /* Adjust the bar color as needed */
-  position: absolute;
-  left: 0;
-  top: 0;
-  transition: width 0.3s ease; /* Add smooth transition effect */
+ border:0 ;
 }

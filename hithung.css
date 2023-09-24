@@ -4,7 +4,7 @@
 
   margin: auto;
   padding: 10px;
-  font-family: "Poppins", sans-serif;;
+  font-family: "Poppins", sans-serif;
 }
 .head {
   text-align: center;
@@ -162,10 +162,8 @@ input[type="radio"]:checked {
   }
 }
 
-
-
 .message-container {
-  background-color: #f0f0f0;;
+  background-color: #f0f0f0;
   border: 1px solid #ccc;
   padding: 10px;
   margin-top: 10px;
@@ -175,31 +173,32 @@ input[type="radio"]:checked {
   font-weight: bold;
   color: #333;
   animation: showMessage 0.5s ease-in-out;
-
 }
 
- /* Style for font color when Team Red wins */
- .message-container.red-win {
+/* Style for font color when Team Red wins */
+.message-container.red-win {
   color: red;
+  background-color: pink;
 }
 
 /* Style for font color when Team Blue wins */
 .message-container.blue-win {
   color: blue;
+  background-color: lightblue;
 }
+
 
 #rules {
   display: block;
 }
 
-#game{
+#game {
   display: none;
 }
 
 .animate-number-change {
   animation: numberChange 1s ease-in-out;
 }
-
 
 @keyframes hammerHit {
   0% {
@@ -222,4 +221,23 @@ input[type="radio"]:checked {
 /* Apply the animation to the "Hit" button when clicked */
 .hit-button-clicked {
   animation: hammerHit 0.3s ease;
+}
+
+.hr-container {
+  display: inline-block;
+  width: 0; /* Initialize width to 0 */
+  height: 15px; /* Adjust the height as needed */
+  background-color: darkpink; /* Adjust the bar color as needed */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Style for the HR bars */
+.hr-bar {
+  height: 100%;
+  background-color: darkpink; /* Adjust the bar color as needed */
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: width 0.3s ease; /* Add smooth transition effect */
 }

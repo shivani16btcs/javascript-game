@@ -226,6 +226,10 @@ input[type="radio"]:checked {
 
 
 /* Style for the HR bars */
-.hr-bar {
+/* .hr-bar {
  border:0 ;
+} */
+
+.team-name{
+  font-weight: 600;
 }

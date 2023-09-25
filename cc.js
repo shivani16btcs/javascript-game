@@ -4,6 +4,12 @@ function startGame() {
   game.style.display = "block";
 }
 
+function showRule(){
+    var rules = document.getElementById("rules");
+    rules.style.display = "block";
+    game.style.display = "none";
+}
+
 function radioclick(x) {
   if (x == 1) {
     turn1();
